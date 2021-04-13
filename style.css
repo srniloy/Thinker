@@ -675,15 +675,21 @@ li {
 
 .bnav-bottom .same {
     height: 100%;
-    flex: 1;
     display: grid;
     align-items: center;
     align-content: center;
 }
 
+.bnav-bottom .first {
+    flex: 4;
+}
+
+.bnav-bottom .second {
+    flex: 2;
+}
+
 .bnav-bottom .second ul {
     list-style-type: none;
-    transform: translateX(20px);
 }
 
 .bnav-bottom .second ul li {
