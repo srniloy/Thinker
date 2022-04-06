@@ -76,25 +76,24 @@ abc.addEventListener('click', function() {
 // ===============preloader==============
 const loadingText = document.querySelector('#loadingText');
 let points = 0;
-window.addEventListener('load',()=>{
-    setInterval(() => {
-        if(points==-1){
-            loadingText.innerHTML="";
-            points++;
-        }else if(points==0){
-            loadingText.innerHTML=".";
-            points++;
-        }else if(points==1){
-            loadingText.innerHTML="..";
-            points++;
-        }
-        else if(points==2){
-            loadingText.innerHTML="...";
-            points=-1;
-        }
-    }, 500);
 
-})
+setInterval(() => {
+    if(points==-1){
+        loadingText.innerHTML="";
+        points++;
+    }else if(points==0){
+        loadingText.innerHTML=".";
+        points++;
+    }else if(points==1){
+        loadingText.innerHTML="..";
+        points++;
+    }
+    else if(points==2){
+        loadingText.innerHTML="...";
+        points=-1;
+    }
+}, 400);
+
 
 // const Full_Body = document.querySelector('#Full_Body');
 

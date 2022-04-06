@@ -158,6 +158,9 @@
     #preloader .prestyles h1 {
         font-size: 1.5em;
     }
+    #preloader .prestyles {
+        width:220px;
+    }
 }
 
 
@@ -196,6 +199,10 @@
     #preloader .prestyles h1 {
         font-size: 1.2em;
     }
+    #preloader .prestyles {
+        width:180px;
+    }
+
     /*============contact section===========*/
     input.name,
     input.email {

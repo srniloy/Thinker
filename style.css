@@ -30,15 +30,19 @@ body {
 
 #preloader .prestyles {
     height: max-content;
-    width:max-content;
+    width:300px;
+}
+#preloader .prestyles .loadingText{
+    position: fixed;
+    width: 30px;
 }
 
 #preloader .prestyles h1 {
     color: rgb(0, 174, 255);
     margin: auto;
     text-align: left;
-    text-transform: uppercase;
-    font-size: 2em;
+    /* text-transform: capitalize; */
+    font-size: 1.9em;
 }
 
 .topNav1,.top-nav,#home,#about,#service,#portfolio,#contact,.bnav-main,.clickForUp{
@@ -63,7 +67,7 @@ section {
 }
 
 #home {
-    background: linear-gradient(to right, rgba(0,0,0,0.7) 55%,rgba(0,0,0,0.95) 0%), url("./img/home-bg.jpg");
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 55%,rgba(0,0,0,0.95) 0%), url("./img/home-bg.jpg") center center/cover fixed;
     height: auto;
     width: 100%;
     background-size: cover;
