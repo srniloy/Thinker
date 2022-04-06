@@ -96,11 +96,15 @@ window.addEventListener('load',()=>{
 
 })
 
-const Full_Body = document.querySelector('#Full_Body');
+// const Full_Body = document.querySelector('#Full_Body');
 
 function stopLoading() {
     loader.style.display = 'none';
-    Full_Body.style.display = 'block';
+    // Full_Body.style.display = 'block';
+    const all_thing =  document.querySelectorAll('.topNav1,.top-nav,#home,#about,#service,#portfolio,#contact,.bnav-main,.clickForUp');
+    all_thing.forEach((element)=>{
+        element.style.visibility = "visible";
+    })
 }
 
 function skillpercentChange(a) {
