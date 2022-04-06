@@ -13,6 +13,23 @@ const percentDiv = document.querySelectorAll('.skill .per div');
 const percentP = document.querySelectorAll('.smd .per p');
 //==========Skills animation============
 
+// =========Portfolio flex style===========
+
+const allWebProject = document.querySelectorAll('.webprojectAll');
+const projectBox = document.querySelectorAll('.webProjects div');
+
+projectBox.forEach(webprojectAll => webprojectAll.addEventListener('click', function() {
+    this.classList.toggle('open');
+}));
+
+
+projectBox
+
+
+
+
+// =========Portfolio flex style===========
+
 
 window.addEventListener('scroll', changes);
 
@@ -40,25 +57,57 @@ function changes() {
 
     if (window.scrollY >= aboutTopLength) {
         skillStarts.classList.add('animateSkills');
-        console.log(percentMainDiv.offsetWidth);
-        skillpercentChange();
+        var percentOfSkills = [100, 90, 70, 85, 95, 65,90,70];
+        skillpercentChange(percentOfSkills);
     } else {
         skillStarts.classList.remove('animateSkills');
+        for (var i = 0; i < percentDiv.length; i++) {
+            percentDiv[i].style.width = 0 + "%";
+            percentP[i].innerHTML = "";
+        }
     }
-
 }
+
 
 
 abc.addEventListener('click', function() {
     window.scrollTo(0, 0);
 });
 // ===============preloader==============
+const loadingText = document.querySelector('#loadingText');
+let points = 0;
+window.addEventListener('load',()=>{
+    setInterval(() => {
+        if(points==-1){
+            loadingText.innerHTML="";
+            points++;
+        }else if(points==0){
+            loadingText.innerHTML=".";
+            points++;
+        }else if(points==1){
+            loadingText.innerHTML="..";
+            points++;
+        }
+        else if(points==2){
+            loadingText.innerHTML="...";
+            points=-1;
+        }
+    }, 500);
+
+})
+
+const Full_Body = document.querySelector('#Full_Body');
+
 function stopLoading() {
     loader.style.display = 'none';
+    Full_Body.style.display = 'block';
 }
 
-function skillpercentChange() {
+function skillpercentChange(a) {
     for (var i = 0; i < percentDiv.length; i++) {
-        percentP[i].innerHTML = parseInt((100 * percentDiv[i].offsetWidth) / percentMainDiv.offsetWidth) + "%";
+        percentDiv[i].style.width = a[i] + "%";
+        percentP[i].innerHTML = parseInt((percentDiv[i].offsetWidth * 100) / percentMainDiv.offsetWidth) + "%";
+
+
     }
 }

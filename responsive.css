@@ -6,7 +6,7 @@
 @media (max-width: 1050px) {
     /*===============Home Section===========*/
     .h-div .h-div1 .h-info h1 {
-        font-size: 35px;
+        font-size: 4em;
         margin-bottom: 10px;
     }
     .h-div .h-div1 .h-info {
@@ -33,10 +33,16 @@
         width: 320px;
         margin: auto;
     }
-    .pm .pmc {
+    /* .pm .pmc {
         height: 200px;
         margin: 3px;
         width: 40%;
+    } */
+    .about-container{
+        flex-direction:column-reverse;
+    }
+    .h-div2 .h-pic {
+        display: none;
     }
 }
 
@@ -87,7 +93,7 @@
         width: 100%;
     }
     .h-div .h-div1 .h-info h1 {
-        font-size: 22px;
+        font-size: 3em;
         margin-bottom: 10px;
     }
     .h-div .h-div1 .h-info {
@@ -142,6 +148,16 @@
     .smd .skill .per div p {
         font-size: 11px;
     }
+
+    .animate{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .bnav-main .bnav-top .third {
+        display: none;
+    }
+    #preloader .prestyles h1 {
+        font-size: 1.5em;
+    }
 }
 
 
@@ -155,64 +171,30 @@
     .p1 img {
         margin: auto;
     }
-    .p1 .pm {
-        height: auto;
-        width: 80%;
-        margin: auto;
-        overflow: hidden;
-    }
+
     .p1 .pm .animate {
-        position: relative;
-        left: 0;
-        float: left;
-        width: 500%;
-        animation: slide 20s infinite;
-    }
-    .p1 .pm .animate .pmc {
-        float: left;
-        margin: 0;
-        width: 20%;
-    }
-    .pm .pm6 {
-        display: none;
-    }
-    @keyframes slide {
-        0% {
-            left: 0%;
-        }
-        10% {
-            left: 0%;
-        }
-        12% {
-            left: -100%;
-        }
-        30% {
-            left: -100%;
-        }
-        32% {
-            left: -200%;
-        }
-        50% {
-            left: -200%;
-        }
-        52% {
-            left: -300%;
-        }
-        70% {
-            left: -300%;
-        }
-        72% {
-            left: -400%;
-        }
-        90% {
-            left: -400%;
-        }
-        100% {
-            left: 0%;
-        }
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-gap: 1vw;
     }
     .pmc .ph h3 {
-        padding: 35% 0% 0% 5%;
+        padding: 20% 0 0% 5%;
+        color: white;
+        cursor: pointer;
+    }
+    .bnav-main .bnav-top {
+        flex-direction: column;
+        padding: 3vh;
+    }
+    .bnav-main .bnav-top .same {
+        padding: 20px 0;
+    }
+    .bnav-main .bnav-top h2{
+        font-size: 2em;
+    }
+    #preloader .prestyles h1 {
+        font-size: 1.2em;
     }
     /*============contact section===========*/
     input.name,
@@ -225,6 +207,9 @@
     textarea.message {
         margin: 30px auto;
     }
+
+
+    
 }
 
 
